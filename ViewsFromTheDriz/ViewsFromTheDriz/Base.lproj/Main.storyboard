@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Cto-TY-sLZ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Drizzy Detail View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="DrizzyDetailViewController" customModule="ViewsFromTheDriz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RmZ-Wf-aVw">
+                                <rect key="frame" x="244" y="304" width="112" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Afro">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7n9-O3-Pk9" kind="showDetail" identifier="Afro" id="sg8-oO-qa7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwe-P5-hU6">
+                                <rect key="frame" x="244" y="356" width="112" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="NWTS">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7n9-O3-Pk9" kind="showDetail" identifier="NWTS" id="us9-y7-6pL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7H-9E-0J3">
+                                <rect key="frame" x="244" y="200" width="112" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="Ffe-Ha-9VZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Meek">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7n9-O3-Pk9" kind="showDetail" identifier="Meek" id="eVC-FK-eSr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGF-aO-7MQ">
+                                <rect key="frame" x="244" y="252" width="117" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Momma">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7n9-O3-Pk9" kind="showDetail" identifier="Momma" id="vxY-Ef-r9T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gwe-P5-hU6" firstAttribute="top" secondItem="RmZ-Wf-aVw" secondAttribute="bottom" constant="1" id="3me-or-AD0"/>
+                            <constraint firstItem="wGF-aO-7MQ" firstAttribute="top" secondItem="z7H-9E-0J3" secondAttribute="bottom" constant="1" id="Ao7-0g-mjF"/>
+                            <constraint firstItem="wGF-aO-7MQ" firstAttribute="leading" secondItem="RmZ-Wf-aVw" secondAttribute="leading" id="CPM-Y7-OMi"/>
+                            <constraint firstItem="RmZ-Wf-aVw" firstAttribute="top" secondItem="wGF-aO-7MQ" secondAttribute="bottom" constant="1" id="JBp-TP-pmf"/>
+                            <constraint firstItem="Gwe-P5-hU6" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Uxf-dk-j9E"/>
+                            <constraint firstItem="RmZ-Wf-aVw" firstAttribute="trailing" secondItem="Gwe-P5-hU6" secondAttribute="trailing" id="g79-fu-P0P"/>
+                            <constraint firstItem="z7H-9E-0J3" firstAttribute="trailing" secondItem="RmZ-Wf-aVw" secondAttribute="trailing" id="hca-Ce-WjP"/>
+                            <constraint firstItem="z7H-9E-0J3" firstAttribute="leading" secondItem="wGF-aO-7MQ" secondAttribute="leading" id="mYK-Ad-zSH"/>
+                            <constraint firstItem="z7H-9E-0J3" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="136" id="vD1-Lp-6X4"/>
+                            <constraint firstItem="Gwe-P5-hU6" firstAttribute="leading" secondItem="RmZ-Wf-aVw" secondAttribute="leading" id="vgv-a6-bUf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="U1W-NT-sFv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1851" y="777"/>
+        </scene>
+        <!--Drizzy View Controller-->
+        <scene sceneID="Yan-Cr-s0M">
+            <objects>
+                <viewController id="7n9-O3-Pk9" customClass="DrizzyViewController" customModule="ViewsFromTheDriz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Iq-0m-u1r"/>
+                        <viewControllerLayoutGuide type="bottom" id="uOd-Vg-LQP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c7E-aR-BTr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="73m-0V-0EB">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdl-7f-iqE">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="73m-0V-0EB" firstAttribute="centerY" secondItem="bdl-7f-iqE" secondAttribute="centerY" id="0Xd-gE-STk"/>
+                            <constraint firstAttribute="trailing" secondItem="bdl-7f-iqE" secondAttribute="trailing" id="8x9-cn-m1G"/>
+                            <constraint firstItem="bdl-7f-iqE" firstAttribute="leading" secondItem="c7E-aR-BTr" secondAttribute="leading" id="SLU-Tp-vy2"/>
+                            <constraint firstItem="bdl-7f-iqE" firstAttribute="bottom" secondItem="uOd-Vg-LQP" secondAttribute="top" id="TlY-VZ-e07"/>
+                            <constraint firstItem="bdl-7f-iqE" firstAttribute="top" secondItem="c7E-aR-BTr" secondAttribute="top" id="WqF-Id-nuI"/>
+                            <constraint firstItem="73m-0V-0EB" firstAttribute="centerX" secondItem="bdl-7f-iqE" secondAttribute="centerX" id="zkn-MQ-TxR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="bdl-7f-iqE" id="UmF-dM-5nl"/>
+                        <outlet property="spinner" destination="73m-0V-0EB" id="NRb-0a-Wjn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVx-yo-HHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="985" y="1575"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="x7P-IJ-C91">
+            <objects>
+                <splitViewController id="Cto-TY-sLZ" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="JcD-VU-8h5" kind="relationship" relationship="masterViewController" id="9fQ-WN-cI4"/>
+                        <segue destination="7n9-O3-Pk9" kind="relationship" relationship="detailViewController" id="61o-CU-DyA"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="baO-ff-dmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-35" y="1075"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PgQ-4Z-Qlq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JcD-VU-8h5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nr5-3X-egF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="jos-Co-BOg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ocP-Eq-S9O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="787"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="us9-y7-6pL"/>
+    </inferredMetricsTieBreakers>
+</document>
