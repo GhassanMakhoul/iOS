@@ -2,9 +2,10 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Cto-TY-sLZ">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Drizzy Detail View Controller-->
+        <!--Back2Back-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="DrizzyDetailViewController" customModule="ViewsFromTheDriz" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,7 +24,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7n9-O3-Pk9" kind="showDetail" identifier="Afro" id="sg8-oO-qa7"/>
+                                    <segue destination="738-ED-KDL" kind="showDetail" identifier="Afro" id="sg8-oO-qa7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwe-P5-hU6">
@@ -33,7 +34,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7n9-O3-Pk9" kind="showDetail" identifier="NWTS" id="us9-y7-6pL"/>
+                                    <segue destination="738-ED-KDL" kind="showDetail" identifier="NWTS" id="us9-y7-6pL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7H-9E-0J3">
@@ -46,7 +47,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7n9-O3-Pk9" kind="showDetail" identifier="Meek" id="eVC-FK-eSr"/>
+                                    <segue destination="738-ED-KDL" kind="showDetail" identifier="Meek" id="eVC-FK-eSr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGF-aO-7MQ">
@@ -56,7 +57,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="7n9-O3-Pk9" kind="showDetail" identifier="Momma" id="vxY-Ef-r9T"/>
+                                    <segue destination="738-ED-KDL" kind="showDetail" identifier="Momma" id="vxY-Ef-r9T"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,11 +75,74 @@
                             <constraint firstItem="Gwe-P5-hU6" firstAttribute="leading" secondItem="RmZ-Wf-aVw" secondAttribute="leading" id="vgv-a6-bUf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="U1W-NT-sFv"/>
+                    <navigationItem key="navigationItem" title="Back2Back" id="U1W-NT-sFv">
+                        <barButtonItem key="rightBarButtonItem" title="Play" id="vi9-ZR-gmi">
+                            <connections>
+                                <segue destination="nEc-nP-0vP" kind="show" identifier="Play Game" id="NMS-TY-tQf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1851" y="777"/>
+        </scene>
+        <!--Lyric View Controller-->
+        <scene sceneID="CMI-pd-JoJ">
+            <objects>
+                <viewController id="nEc-nP-0vP" customClass="LyricViewController" customModule="ViewsFromTheDriz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ikd-AI-aOS"/>
+                        <viewControllerLayoutGuide type="bottom" id="o7M-f7-0rB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cfP-an-lMH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPj-Rx-cf6">
+                                <rect key="frame" x="267" y="236" width="67" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Drake">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPp-xf-okC">
+                                <rect key="frame" x="269" y="320" width="63" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Meek">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJn-3t-fNa">
+                                <rect key="frame" x="138" y="72" width="325" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="gdh-eR-xb1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wPp-xf-okC" firstAttribute="centerX" secondItem="cfP-an-lMH" secondAttribute="centerX" id="FmD-bv-uMS"/>
+                            <constraint firstItem="nPj-Rx-cf6" firstAttribute="centerX" secondItem="wPp-xf-okC" secondAttribute="centerX" id="K3I-kp-o4d"/>
+                            <constraint firstItem="nPj-Rx-cf6" firstAttribute="top" secondItem="ikd-AI-aOS" secondAttribute="bottom" constant="172" id="KdO-Pb-3DN"/>
+                            <constraint firstItem="CJn-3t-fNa" firstAttribute="top" secondItem="ikd-AI-aOS" secondAttribute="bottom" constant="8" symbolic="YES" id="YbR-mh-Gre"/>
+                            <constraint firstItem="CJn-3t-fNa" firstAttribute="centerX" secondItem="nPj-Rx-cf6" secondAttribute="centerX" id="aaq-t6-9wo"/>
+                            <constraint firstItem="wPp-xf-okC" firstAttribute="top" secondItem="nPj-Rx-cf6" secondAttribute="bottom" constant="40" id="dna-NG-ssw"/>
+                            <constraint firstItem="nPj-Rx-cf6" firstAttribute="top" secondItem="CJn-3t-fNa" secondAttribute="bottom" constant="99" id="lw0-r3-FJv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Drizzy" destination="nPj-Rx-cf6" id="hbo-rO-wz9"/>
+                        <outlet property="Meek" destination="wPp-xf-okC" id="tSe-AL-wRt"/>
+                        <outlet property="lyricView" destination="CJn-3t-fNa" id="Frs-m2-T1X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c1j-qp-bC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2749" y="787"/>
         </scene>
         <!--Drizzy View Controller-->
         <scene sceneID="Yan-Cr-s0M">
@@ -93,10 +157,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="73m-0V-0EB">
-                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                                <rect key="frame" x="290" y="268" width="20" height="20"/>
                             </activityIndicatorView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bdl-7f-iqE">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,6 +173,17 @@
                             <constraint firstItem="73m-0V-0EB" firstAttribute="centerX" secondItem="bdl-7f-iqE" secondAttribute="centerX" id="zkn-MQ-TxR"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="imy-Gq-MSx">
+                        <barButtonItem key="rightBarButtonItem" title="Score" id="0jd-IX-CN5">
+                            <connections>
+                                <segue destination="dAa-Mn-W6k" kind="popoverPresentation" identifier="Show Score" popoverAnchorBarButtonItem="0jd-IX-CN5" id="jPE-SE-fBS">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="scrollView" destination="bdl-7f-iqE" id="UmF-dM-5nl"/>
                         <outlet property="spinner" destination="73m-0V-0EB" id="NRb-0a-Wjn"/>
@@ -116,7 +191,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVx-yo-HHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="985" y="1575"/>
+            <point key="canvasLocation" x="1797" y="1575"/>
+        </scene>
+        <!--Score View Controller-->
+        <scene sceneID="gcW-qX-x49">
+            <objects>
+                <viewController id="dAa-Mn-W6k" customClass="ScoreViewController" customModule="ViewsFromTheDriz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ErA-Hu-8Lx"/>
+                        <viewControllerLayoutGuide type="bottom" id="tGE-aj-rgc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eaa-3T-11S">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDP-Lx-cPe">
+                                <rect key="frame" x="0.0" y="-8" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FDP-Lx-cPe" firstAttribute="top" secondItem="eaa-3T-11S" secondAttribute="topMargin" constant="-8" id="576-BY-COh"/>
+                            <constraint firstItem="tGE-aj-rgc" firstAttribute="top" secondItem="FDP-Lx-cPe" secondAttribute="bottom" constant="8" symbolic="YES" id="F1v-mT-JdF"/>
+                            <constraint firstAttribute="trailing" secondItem="FDP-Lx-cPe" secondAttribute="trailing" id="a7i-uw-4hj"/>
+                            <constraint firstItem="FDP-Lx-cPe" firstAttribute="leading" secondItem="eaa-3T-11S" secondAttribute="leading" id="jYJ-8O-PHf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scoreView" destination="FDP-Lx-cPe" id="GiL-3c-Rpp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nB4-7P-roE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2522" y="1599"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="x7P-IJ-C91">
@@ -124,7 +235,7 @@
                 <splitViewController id="Cto-TY-sLZ" sceneMemberID="viewController">
                     <connections>
                         <segue destination="JcD-VU-8h5" kind="relationship" relationship="masterViewController" id="9fQ-WN-cI4"/>
-                        <segue destination="7n9-O3-Pk9" kind="relationship" relationship="detailViewController" id="61o-CU-DyA"/>
+                        <segue destination="738-ED-KDL" kind="relationship" relationship="detailViewController" id="61o-CU-DyA"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="baO-ff-dmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -149,8 +260,26 @@
             </objects>
             <point key="canvasLocation" x="1039" y="787"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fQo-Lq-N98">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="738-ED-KDL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nqj-Zi-mGZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7n9-O3-Pk9" kind="relationship" relationship="rootViewController" id="CFT-Lw-XXQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fvc-vA-w1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="985" y="1575"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="us9-y7-6pL"/>
+        <segue reference="eVC-FK-eSr"/>
     </inferredMetricsTieBreakers>
 </document>

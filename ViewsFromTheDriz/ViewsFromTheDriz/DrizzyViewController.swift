@@ -8,8 +8,10 @@
 
 import UIKit
 
-class DrizzyViewController: UIViewController, UIScrollViewDelegate {
-    
+class DrizzyViewController: UIViewController, UIScrollViewDelegate, UIPopoverPresentationControllerDelegate{
+    struct Storyboard {
+        static let ScoreVC = "Show Score"
+    }
      @IBOutlet weak var scrollView: UIScrollView! {
         didSet{
             scrollView.contentSize = imageView.frame.size
@@ -38,7 +40,8 @@ class DrizzyViewController: UIViewController, UIScrollViewDelegate {
             }
     }
 
-    
+    var drakeScore = 2
+    var meekScore = 0
     private func retrieveImage() {
         if let url = imageURL {
             spinner?.startAnimating()
@@ -61,10 +64,32 @@ class DrizzyViewController: UIViewController, UIScrollViewDelegate {
 
         }
     }
-    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.None
+    }
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController!, traitCollection: UITraitCollection!) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.None
+    }
     
     func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return imageView
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier {
+             switch identifier{
+             case Storyboard.ScoreVC:
+                if let svc = segue.destinationViewController as? ScoreViewController {
+                    if let ppc = svc.presentationController {
+                        ppc.delegate = self
+                    }
+                    svc.score = "Drake: \(drakeScore) - Meek: \(meekScore)"
+                }
+             default: break
+                
+            }
+            
+        }
     }
     
     override func viewDidLoad() {
