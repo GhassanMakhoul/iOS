@@ -15,16 +15,37 @@ class LyricViewController: UIViewController {
             lyricView.text = "'\(lyrics)'"
         }
     }
+    
+    var response: String?
     let feud = FeudBrain()
-    @IBOutlet weak var Drizzy: UIButton!
-    @IBOutlet weak var Meek: UIButton!
+    var right: Bool? {
+        didSet{
+            updateUI()
+        }
+    }
+
+ 
+    @IBAction func rapper(sender: UIButton) {
+        response = sender.currentTitle
+        right = feud.checkAnswer(response!, lyric: lyricView?.text ?? "" )
+        
+    }
+
     
     private var lyrics = "" {
         didSet{
             lyricView?.text = "'\(lyrics)'"
         }
     }
-    
+    func updateUI() {
+        if let correct = right {
+            if correct {
+                lyricView.text = "correct!"
+                lyrics = feud.getLyric()
+                right = false
+            }
+        }
+    }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         lyrics = feud.getLyric()

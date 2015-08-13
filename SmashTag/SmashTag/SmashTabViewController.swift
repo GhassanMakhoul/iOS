@@ -8,7 +8,13 @@
 
 import UIKit
 
-class SmahTabViewController: UITabBarController {
+class SmashTabViewController: UITabBarController {
+    @IBAction func goBack(segue: UIStoryboardSegue) {
+        if let svc = self.presentedViewController as? SmashTableViewController{
+           svc.lastSuccessfulRequest = nil
+            svc.refresh()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +26,10 @@ class SmahTabViewController: UITabBarController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    override func viewControllerForUnwindSegueAction(action: Selector, fromViewController: UIViewController, withSender sender: AnyObject?) -> UIViewController? {
+        let resultVC = self.selectedViewController?.viewControllerForUnwindSegueAction(action, fromViewController: fromViewController, withSender: sender)
+        return resultVC
+    }
 
     /*
     // MARK: - Navigation

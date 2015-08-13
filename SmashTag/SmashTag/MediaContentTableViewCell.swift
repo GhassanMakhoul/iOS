@@ -8,7 +8,26 @@
 
 import UIKit
 
-class TweetContentTableViewCell: UITableViewCell {
+class MediaContentTableViewCell: UITableViewCell {
+    var media: NSURL? {
+        didSet {
+            updateUI()
+        }
+    }
+    
+    @IBOutlet weak var images: UIImageView!
+    func updateUI() {
+        if images != nil {
+            if let mData = media {
+                if let content = NSData(contentsOfURL:  mData) {
+                    let img = UIImage(data: content)
+                    images.image = img
+                }
+                
+            }
+            
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

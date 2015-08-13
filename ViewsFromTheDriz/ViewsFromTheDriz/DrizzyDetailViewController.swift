@@ -43,7 +43,7 @@ class DrizzyDetailViewController: UIViewController {
         if let lvc = destination as? LyricViewController {
             if let identifier = segue.identifier{
                 switch identifier {
-                    case "Play Game": lvc.title = "How rapped it?"
+                    case "Play Game": lvc.title = "Who rapped it?"
                     default: break
                     
                 }

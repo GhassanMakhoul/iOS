@@ -9,7 +9,27 @@
 import UIKit
 
 class MentionsTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var body: UILabel!
+    @IBOutlet weak var title: UILabel!
+    var mentions: String? {
+        didSet {
+            updateUI()
+        }
+    }
+    
+    var header = ""
+    
+    func updateUI() {
+        if let content = mentions {
+            if body != nil {
+                body.text = mentions
+            }
+            if title != nil {
+                self.title.text = self.header
+            }
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

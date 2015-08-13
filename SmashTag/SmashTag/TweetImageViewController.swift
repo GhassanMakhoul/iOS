@@ -8,11 +8,34 @@
 
 import UIKit
 
-class TweetImageViewController: UIViewController {
+class TweetImageViewController: UIViewController, UIScrollViewDelegate {
+    var img : UIImage? {
+        get { return imgView.image}
+        set{
+            imgView.image = newValue
+            imgView.sizeToFit()
+            scrollView?.contentSize = imgView.frame.size
+            
+        }
+    }
 
+    @IBOutlet weak var scrollView: UIScrollView! {
+        didSet {
+            scrollView.contentSize = imgView.frame.size
+            scrollView.delegate = self
+            scrollView.maximumZoomScale = 2.0
+            scrollView.minimumZoomScale = 0.05
+        }
+    }
+    private var imgView = UIImageView()
+    func updateUI() {
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        scrollView.addSubview(imgView)
+        scrollView.contentSize = imgView.frame.size
+        
         // Do any additional setup after loading the view.
     }
 
@@ -20,7 +43,9 @@ class TweetImageViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return imgView
+    }
 
     /*
     // MARK: - Navigation

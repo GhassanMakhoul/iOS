@@ -28,6 +28,11 @@ class FeudBrain {
        return DBase.getRandomLyric()
     }
     
+    func checkAnswer(answer: String, lyric: String) -> Bool {
+        let check = DBase.getRapper(lyric)
+        return check == answer
+    }
+    
 }
 
 

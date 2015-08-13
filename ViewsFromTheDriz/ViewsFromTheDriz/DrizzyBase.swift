@@ -61,7 +61,21 @@ class DrizzyBase
         lyricBase.append(Lyric.Meek("Shout out to my bitches"))
         totalLyrics = lyricBase.count
     }
-    
+    func getRapper(lyric: String) ->String {
+        for raps in lyricBase {
+            switch raps {
+            case .Drake(let rap):
+                if "'\(rap)'" == lyric {
+                    return "Drake"
+                }
+            case .Meek(let rap):
+                if "'\(rap)'" == lyric{
+                    return "Meek"
+                }
+            }
+        }
+        return "Meek's Sister"
+    }
     func addLyric(lyric: String, Rapper: String) {
         switch Rapper {
             case "Drake":  lyricBase.append(Lyric.Drake(lyric))
